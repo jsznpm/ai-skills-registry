@@ -6,7 +6,9 @@ import { addCommand } from "./commands/add.js";
 import { infoCommand } from "./commands/info.js";
 import { removeCommand } from "./commands/remove.js";
 import { updateCommand } from "./commands/update.js";
-import { BANNER } from "./banner.js";
+import { BANNER, showBannerOnce } from "./banner.js";
+
+showBannerOnce();
 
 const program = new Command();
 
