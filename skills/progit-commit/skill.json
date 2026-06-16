@@ -1,0 +1,7 @@
+{
+  "name": "progit-commit",
+  "version": "1.0.0",
+  "description": "Generates professional, Conventional Commits–style git commit messages by analyzing the staged diff",
+  "author": "JAVID Salimov",
+  "tags": ["git", "commit", "conventional-commits", "vcs", "workflow"]
+}

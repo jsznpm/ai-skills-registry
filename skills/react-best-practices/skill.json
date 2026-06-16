@@ -1,0 +1,7 @@
+{
+  "name": "react-best-practices",
+  "version": "1.0.0",
+  "description": "Comprehensive React and Next.js performance optimization guide with 40+ rules for eliminating waterfalls, optimizing bundles, and improving rendering",
+  "author": "Vercel Engineering",
+  "tags": ["react", "nextjs", "performance", "optimization", "bundle-size", "rendering", "server-components"]
+}

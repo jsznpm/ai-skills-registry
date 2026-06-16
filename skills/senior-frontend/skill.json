@@ -1,0 +1,7 @@
+{
+  "name": "senior-frontend",
+  "version": "1.0.0",
+  "description": "Senior frontend skill — build modern, performant web apps with React, Next.js, TypeScript and Tailwind CSS",
+  "author": "ai-skills-registry",
+  "tags": ["react", "nextjs", "typescript", "tailwind", "frontend", "performance"]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "code-to-lesson",
+  "version": "1.0.0",
+  "description": "Analyzes a code project end-to-end and writes a deep-dive engineering tutorial to code_tutorial.md",
+  "author": "Javid Salimov",
+  "tags": ["tutorial", "architecture", "refactoring", "react", "code-review", "patterns"]
+}

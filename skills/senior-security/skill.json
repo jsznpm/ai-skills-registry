@@ -1,0 +1,7 @@
+{
+  "name": "senior-security",
+  "version": "1.0.0",
+  "description": "Senior security engineering skill — threat modeling, secure architecture, authorized pentesting, cryptography and compliance auditing",
+  "author": "ai-skills-registry",
+  "tags": ["security", "appsec", "threat-modeling", "pentest", "cryptography", "compliance"]
+}

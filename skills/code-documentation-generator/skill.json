@@ -1,0 +1,7 @@
+{
+  "name": "code-documentation-generator",
+  "version": "1.0.0",
+  "description": "Generates professional Markdown documentation (README.md, API_DOCS.md, optional IMPLEMENTATION_NOTES.md) from source code in any language",
+  "author": "Javid Salimov",
+  "tags": ["documentation", "markdown", "api-docs", "readme", "code-analysis"]
+}

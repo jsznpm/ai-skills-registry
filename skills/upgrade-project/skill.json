@@ -1,0 +1,7 @@
+{
+  "name": "upgrade-project",
+  "version": "1.0.0",
+  "description": "Upgrades npm dependencies in a project safely — checks outdated packages, bumps versions, runs tests, and reports breaking changes",
+  "author": "Javid Salimov",
+  "tags": ["npm", "dependencies", "upgrade", "maintenance", "tooling"]
+}

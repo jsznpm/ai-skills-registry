@@ -1,7 +1,27 @@
 {
-  "generatedAt": "2026-06-16T20:53:15.747Z",
-  "count": 6,
+  "generatedAt": "2026-06-16T21:45:02.622Z",
+  "count": 13,
   "skills": [
+    {
+      "name": "code-documentation-generator",
+      "version": "1.0.0",
+      "description": "Generates professional Markdown documentation (README.md, API_DOCS.md, optional IMPLEMENTATION_NOTES.md) from source code in any language",
+      "author": "Javid Salimov",
+      "tags": [
+        "documentation",
+        "markdown",
+        "api-docs",
+        "readme",
+        "code-analysis"
+      ],
+      "path": "skills/code-documentation-generator",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "examples.md",
+        "skill.json"
+      ]
+    },
     {
       "name": "code-reviewer",
       "version": "1.0.0",
@@ -15,6 +35,27 @@
       "path": "skills/code-reviewer",
       "files": [
         "SKILL.md",
+        "skill.json"
+      ]
+    },
+    {
+      "name": "code-to-lesson",
+      "version": "1.0.0",
+      "description": "Analyzes a code project end-to-end and writes a deep-dive engineering tutorial to code_tutorial.md",
+      "author": "Javid Salimov",
+      "tags": [
+        "tutorial",
+        "architecture",
+        "refactoring",
+        "react",
+        "code-review",
+        "patterns"
+      ],
+      "path": "skills/code-to-lesson",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "examples.md",
         "skill.json"
       ]
     },
@@ -74,6 +115,26 @@
       ]
     },
     {
+      "name": "progit-commit",
+      "version": "1.0.0",
+      "description": "Generates professional, Conventional Commits–style git commit messages by analyzing the staged diff",
+      "author": "JAVID Salimov",
+      "tags": [
+        "git",
+        "commit",
+        "conventional-commits",
+        "vcs",
+        "workflow"
+      ],
+      "path": "skills/progit-commit",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "examples.md",
+        "skill.json"
+      ]
+    },
+    {
       "name": "python-backend",
       "version": "1.0.0",
       "description": "Python backend skill — API design, async, error handling, security",
@@ -102,6 +163,90 @@
         "architecture"
       ],
       "path": "skills/react-architect",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "examples.md",
+        "skill.json"
+      ]
+    },
+    {
+      "name": "react-best-practices",
+      "version": "1.0.0",
+      "description": "Comprehensive React and Next.js performance optimization guide with 40+ rules for eliminating waterfalls, optimizing bundles, and improving rendering",
+      "author": "Vercel Engineering",
+      "tags": [
+        "react",
+        "nextjs",
+        "performance",
+        "optimization",
+        "bundle-size",
+        "rendering",
+        "server-components"
+      ],
+      "path": "skills/react-best-practices",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "references/react-performance-guidelines.md",
+        "skill.json"
+      ]
+    },
+    {
+      "name": "senior-frontend",
+      "version": "1.0.0",
+      "description": "Senior frontend skill — build modern, performant web apps with React, Next.js, TypeScript and Tailwind CSS",
+      "author": "ai-skills-registry",
+      "tags": [
+        "react",
+        "nextjs",
+        "typescript",
+        "tailwind",
+        "frontend",
+        "performance"
+      ],
+      "path": "skills/senior-frontend",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "examples.md",
+        "skill.json"
+      ]
+    },
+    {
+      "name": "senior-security",
+      "version": "1.0.0",
+      "description": "Senior security engineering skill — threat modeling, secure architecture, authorized pentesting, cryptography and compliance auditing",
+      "author": "ai-skills-registry",
+      "tags": [
+        "security",
+        "appsec",
+        "threat-modeling",
+        "pentest",
+        "cryptography",
+        "compliance"
+      ],
+      "path": "skills/senior-security",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "examples.md",
+        "skill.json"
+      ]
+    },
+    {
+      "name": "upgrade-project",
+      "version": "1.0.0",
+      "description": "Upgrades npm dependencies in a project safely — checks outdated packages, bumps versions, runs tests, and reports breaking changes",
+      "author": "Javid Salimov",
+      "tags": [
+        "npm",
+        "dependencies",
+        "upgrade",
+        "maintenance",
+        "tooling"
+      ],
+      "path": "skills/upgrade-project",
       "files": [
         "README.md",
         "SKILL.md",
