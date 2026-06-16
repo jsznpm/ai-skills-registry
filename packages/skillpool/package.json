@@ -1,6 +1,6 @@
 {
   "name": "skillpool",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Package manager for the AI Skills Registry — list, search, add, remove skills",
   "type": "module",
   "bin": {
