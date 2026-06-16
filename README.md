@@ -3,7 +3,7 @@
 A registry + package manager for **AI agent skills**. Each skill is a folder of
 prompt files (`system.md`, `examples.md`, `rules.md`, …) plus a `skill.json`
 manifest. The [`skillpool`](packages/skillpool) CLI installs them into a project's
-`.skills/` folder for Claude Code, Cursor, Windsurf, and MCP-based agents.
+`.claude/skills/` folder for Claude Code, Cursor, Windsurf, and MCP-based agents.
 
 ## Why this design
 
@@ -29,7 +29,7 @@ ai-skills-registry/
 ```bash
 npm i -g skillpool
 skillpool list
-skillpool add react-architect     # -> ./.skills/react-architect/
+skillpool add react-architect     # -> ./.claude/skills/react-architect/
 ```
 
 See [packages/skillpool/README.md](packages/skillpool/README.md) for all commands.

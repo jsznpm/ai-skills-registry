@@ -34,7 +34,7 @@ async function writeManifest(cwd: string, manifest: Manifest): Promise<void> {
 }
 
 /**
- * Download every file of a skill into .skills/<name>/ and record it in the
+ * Download every file of a skill into .claude/skills/<name>/ and record it in the
  * manifest. Reports progress via onFile. Returns the installed file list.
  */
 export async function installSkill(

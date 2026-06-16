@@ -1,0 +1,7 @@
+{
+  "name": "diff-reviewer",
+  "version": "1.0.0",
+  "description": "Diff reviewer skill — review only changed hunks for bugs and risks",
+  "author": "ai-skills-registry",
+  "tags": ["review", "diff", "git", "quality"]
+}

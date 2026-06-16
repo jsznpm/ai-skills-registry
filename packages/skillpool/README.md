@@ -1,7 +1,7 @@
 # skillpool
 
 Package manager for the [AI Skills Registry](../../README.md). Installs AI
-agent skills (system prompts, examples, rules) into your project's `.skills/`
+agent skills (system prompts, examples, rules) into your project's `.claude/skills/`
 folder so Claude Code, Cursor, Windsurf, and MCP agents can read them.
 
 ## Install
@@ -19,7 +19,7 @@ skillpool list                  # all skills
 skillpool list --long           # with version + description
 skillpool search react          # by name / description / tag
 skillpool info react-architect  # details + file list
-skillpool add react-architect   # install into ./.skills
+skillpool add react-architect   # install into ./.claude/skills
 skillpool add react-architect@1.0.0
 skillpool remove react-architect
 skillpool update                # update all installed

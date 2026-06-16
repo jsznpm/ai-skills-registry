@@ -1,0 +1,7 @@
+{
+  "name": "python-backend",
+  "version": "1.0.0",
+  "description": "Python backend skill — API design, async, error handling, security",
+  "author": "ai-skills-registry",
+  "tags": ["python", "backend", "api"]
+}

@@ -36,5 +36,5 @@ export function sourceUrl(...parts: string[]): string {
 }
 
 /** Install target inside the user's project. */
-export const SKILLS_DIR = ".skills";
+export const SKILLS_DIR = ".claude/skills";
 export const MANIFEST_FILE = "manifest.json";

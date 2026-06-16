@@ -6,8 +6,11 @@ import { addCommand } from "./commands/add.js";
 import { infoCommand } from "./commands/info.js";
 import { removeCommand } from "./commands/remove.js";
 import { updateCommand } from "./commands/update.js";
+import { BANNER } from "./banner.js";
 
 const program = new Command();
+
+program.addHelpText("beforeAll", BANNER);
 
 program
   .name("skillpool")
@@ -34,7 +37,7 @@ program
 
 program
   .command("add <skill>")
-  .description("install a skill into ./.skills (supports name@version)")
+  .description("install a skill into ./.claude/skills (supports name@version)")
   .action(addCommand);
 
 program
@@ -44,7 +47,7 @@ program
 
 program
   .command("remove <skill>")
-  .description("remove an installed skill from ./.skills")
+  .description("remove an installed skill from ./.claude/skills")
   .action(removeCommand);
 
 program
