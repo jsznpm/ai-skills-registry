@@ -5,5 +5,5 @@ and review guidance.
 
 Install:
 ```bash
-skillhub add react-architect
+skillpool add react-architect
 ```

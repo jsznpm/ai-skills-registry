@@ -7,7 +7,7 @@ export async function addCommand(spec: string): Promise<void> {
   const entry = findSkill(reg, name);
 
   if (!entry) {
-    console.error(`✗ skill "${name}" not found. Try: skillhub search ${name}`);
+    console.error(`✗ skill "${name}" not found. Try: skillpool search ${name}`);
     process.exitCode = 1;
     return;
   }

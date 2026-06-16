@@ -2,7 +2,7 @@
 
 A registry + package manager for **AI agent skills**. Each skill is a folder of
 prompt files (`system.md`, `examples.md`, `rules.md`, …) plus a `skill.json`
-manifest. The [`skillhub`](packages/skillhub) CLI installs them into a project's
+manifest. The [`skillpool`](packages/skillpool) CLI installs them into a project's
 `.skills/` folder for Claude Code, Cursor, Windsurf, and MCP-based agents.
 
 ## Why this design
@@ -21,18 +21,18 @@ ai-skills-registry/
 │       ├── skill.json     # { name, version, description, author, tags }
 │       ├── system.md
 │       └── ...            # any files; all are bundled
-└── packages/skillhub/     # the CLI (published to npm)
+└── packages/skillpool/    # the CLI (published to npm)
 ```
 
 ## Use the CLI
 
 ```bash
-npm i -g skillhub
-skillhub list
-skillhub add react-architect      # -> ./.skills/react-architect/
+npm i -g skillpool
+skillpool list
+skillpool add react-architect     # -> ./.skills/react-architect/
 ```
 
-See [packages/skillhub/README.md](packages/skillhub/README.md) for all commands.
+See [packages/skillpool/README.md](packages/skillpool/README.md) for all commands.
 
 ## Add a new skill
 
@@ -57,7 +57,7 @@ See [packages/skillhub/README.md](packages/skillhub/README.md) for all commands.
 
 ```bash
 npm install                       # installs workspace deps
-npm run build:cli                 # builds packages/skillhub/dist
+npm run build:cli                 # builds packages/skillpool/dist
 # test against the local registry without pushing:
-node packages/skillhub/dist/index.js --registry . list
+node packages/skillpool/dist/index.js --registry . list
 ```

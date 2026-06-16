@@ -1,10 +1,10 @@
 {
-  "name": "skillhub",
+  "name": "skillpool",
   "version": "1.0.0",
   "description": "Package manager for the AI Skills Registry — list, search, add, remove skills",
   "type": "module",
   "bin": {
-    "skillhub": "dist/index.js"
+    "skillpool": "dist/index.js"
   },
   "files": [
     "dist"

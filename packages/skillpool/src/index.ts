@@ -10,7 +10,7 @@ import { updateCommand } from "./commands/update.js";
 const program = new Command();
 
 program
-  .name("skillhub")
+  .name("skillpool")
   .description("Package manager for the AI Skills Registry")
   .version("1.0.0")
   .option(
