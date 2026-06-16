@@ -21,7 +21,7 @@ Ask only for what's missing — infer sensible values otherwise:
 - **description** — one line, what the skill does. Required.
 - **tags** — array of lowercase keywords. Infer from name/description if absent.
 - **author** — default `ai-skills-registry`.
-- **files** — which prompt files to create. Default: `system.md`, `examples.md`,
+- **files** — which prompt files to create. Default: `SKILL.md`, `examples.md`,
   `README.md`. Always include `skill.json`.
 
 Do not proceed if `skills/<name>/` already exists — tell the user and stop (or
@@ -44,7 +44,7 @@ ask whether to overwrite).
    ```
    `name` MUST equal the folder name (build script warns otherwise).
 
-3. Create `skills/<name>/system.md` — the agent system prompt. Write real,
+3. Create `skills/<name>/SKILL.md` — the agent system prompt. Write real,
    useful content for the skill's domain following the style of existing skills
    in `skills/` (Principles + a checklist or output format). No placeholders.
 

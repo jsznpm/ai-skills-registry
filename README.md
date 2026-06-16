@@ -1,7 +1,7 @@
 # AI Skills Registry
 
 A registry + package manager for **AI agent skills**. Each skill is a folder of
-prompt files (`system.md`, `examples.md`, `rules.md`, …) plus a `skill.json`
+prompt files (`SKILL.md`, `examples.md`, `rules.md`, …) plus a `skill.json`
 manifest. The [`skillpool`](packages/skillpool) CLI installs them into a project's
 `.claude/skills/` folder for Claude Code, Cursor, Windsurf, and MCP-based agents.
 
@@ -19,7 +19,7 @@ ai-skills-registry/
 ├── skills/
 │   └── <name>/
 │       ├── skill.json     # { name, version, description, author, tags }
-│       ├── system.md
+│       ├── SKILL.md
 │       └── ...            # any files; all are bundled
 └── packages/skillpool/    # the CLI (published to npm)
 ```
@@ -46,7 +46,7 @@ See [packages/skillpool/README.md](packages/skillpool/README.md) for all command
      "tags": ["..."]
    }
    ```
-2. Add prompt files (`system.md`, `examples.md`, `rules.md`, …).
+2. Add prompt files (`SKILL.md`, `examples.md`, `rules.md`, …).
 3. Regenerate the index:
    ```bash
    npm run build:registry

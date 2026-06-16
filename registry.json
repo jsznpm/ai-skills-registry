@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T20:24:42.025Z",
+  "generatedAt": "2026-06-16T20:44:37.230Z",
   "count": 5,
   "skills": [
     {
@@ -14,8 +14,8 @@
       ],
       "path": "skills/code-reviewer",
       "files": [
-        "skill.json",
-        "system.md"
+        "SKILL.md",
+        "skill.json"
       ]
     },
     {
@@ -32,9 +32,9 @@
       "path": "skills/diff-reviewer",
       "files": [
         "README.md",
+        "SKILL.md",
         "examples.md",
-        "skill.json",
-        "system.md"
+        "skill.json"
       ]
     },
     {
@@ -50,8 +50,8 @@
       "path": "skills/node-backend",
       "files": [
         "README.md",
-        "skill.json",
-        "system.md"
+        "SKILL.md",
+        "skill.json"
       ]
     },
     {
@@ -67,9 +67,9 @@
       "path": "skills/python-backend",
       "files": [
         "README.md",
+        "SKILL.md",
         "examples.md",
-        "skill.json",
-        "system.md"
+        "skill.json"
       ]
     },
     {
@@ -85,9 +85,9 @@
       "path": "skills/react-architect",
       "files": [
         "README.md",
+        "SKILL.md",
         "examples.md",
-        "skill.json",
-        "system.md"
+        "skill.json"
       ]
     }
   ]
