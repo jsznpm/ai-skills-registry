@@ -1,0 +1,57 @@
+{
+  "generatedAt": "2026-06-16T19:39:50.497Z",
+  "count": 3,
+  "skills": [
+    {
+      "name": "code-reviewer",
+      "version": "1.0.0",
+      "description": "Code reviewer skill — correctness, readability, security findings",
+      "author": "ai-skills-registry",
+      "tags": [
+        "review",
+        "quality",
+        "security"
+      ],
+      "path": "skills/code-reviewer",
+      "files": [
+        "skill.json",
+        "system.md"
+      ]
+    },
+    {
+      "name": "node-backend",
+      "version": "1.0.0",
+      "description": "Node.js backend skill — API design, error handling, security",
+      "author": "ai-skills-registry",
+      "tags": [
+        "node",
+        "backend",
+        "api"
+      ],
+      "path": "skills/node-backend",
+      "files": [
+        "README.md",
+        "skill.json",
+        "system.md"
+      ]
+    },
+    {
+      "name": "react-architect",
+      "version": "1.0.0",
+      "description": "Senior React architect skill — component design, state, performance",
+      "author": "ai-skills-registry",
+      "tags": [
+        "react",
+        "frontend",
+        "architecture"
+      ],
+      "path": "skills/react-architect",
+      "files": [
+        "README.md",
+        "examples.md",
+        "skill.json",
+        "system.md"
+      ]
+    }
+  ]
+}

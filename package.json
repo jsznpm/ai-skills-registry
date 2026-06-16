@@ -1,0 +1,15 @@
+{
+  "name": "ai-skills-registry",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Skills Registry + skillhub package manager",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build:registry": "node scripts/build-registry.mjs",
+    "build:cli": "npm run build --workspace skillhub"
+  },
+  "license": "MIT"
+}

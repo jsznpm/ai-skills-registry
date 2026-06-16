@@ -1,0 +1,30 @@
+{
+  "name": "skillhub",
+  "version": "1.0.0",
+  "description": "Package manager for the AI Skills Registry — list, search, add, remove skills",
+  "type": "module",
+  "bin": {
+    "skillhub": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/index.js"
+  },
+  "keywords": ["ai", "skills", "cli", "registry", "agents"],
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  }
+}

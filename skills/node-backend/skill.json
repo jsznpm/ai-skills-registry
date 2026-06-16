@@ -1,0 +1,7 @@
+{
+  "name": "node-backend",
+  "version": "1.0.0",
+  "description": "Node.js backend skill — API design, error handling, security",
+  "author": "ai-skills-registry",
+  "tags": ["node", "backend", "api"]
+}
