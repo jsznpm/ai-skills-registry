@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-16T20:44:37.230Z",
-  "count": 5,
+  "generatedAt": "2026-06-16T20:53:15.747Z",
+  "count": 6,
   "skills": [
     {
       "name": "code-reviewer",
@@ -34,6 +34,25 @@
         "README.md",
         "SKILL.md",
         "examples.md",
+        "skill.json"
+      ]
+    },
+    {
+      "name": "frontend-design",
+      "version": "1.0.0",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality that avoid generic AI aesthetics",
+      "author": "ai-skills-registry",
+      "tags": [
+        "frontend",
+        "design",
+        "ui",
+        "css",
+        "aesthetics"
+      ],
+      "path": "skills/frontend-design",
+      "files": [
+        "README.md",
+        "SKILL.md",
         "skill.json"
       ]
     },
