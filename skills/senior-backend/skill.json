@@ -1,0 +1,7 @@
+{
+  "name": "senior-backend",
+  "version": "1.0.0",
+  "description": "Comprehensive backend development skill for building scalable systems with Node.js, Express, Go, Python, Postgres, GraphQL, and REST. Covers API design, database optimization, security, auth, and performance tuning.",
+  "author": "ai-skills-registry",
+  "tags": ["backend", "api", "database", "security", "performance"]
+}

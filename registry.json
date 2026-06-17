@@ -1,7 +1,27 @@
 {
-  "generatedAt": "2026-06-16T21:45:02.622Z",
-  "count": 13,
+  "generatedAt": "2026-06-17T17:08:24.953Z",
+  "count": 17,
   "skills": [
+    {
+      "name": "ai-ui-patterns",
+      "version": "1.0.0",
+      "description": "Teaches design patterns for building AI-powered React interfaces. Use when creating chatbots, intelligent assistants, streaming UIs, or any AI-driven user experience in React.",
+      "author": "patterns.dev",
+      "tags": [
+        "react",
+        "ai",
+        "chatbot",
+        "streaming",
+        "ui"
+      ],
+      "path": "skills/ai-ui-patterns",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "examples.md",
+        "skill.json"
+      ]
+    },
     {
       "name": "code-documentation-generator",
       "version": "1.0.0",
@@ -193,6 +213,26 @@
       ]
     },
     {
+      "name": "senior-backend",
+      "version": "1.0.0",
+      "description": "Comprehensive backend development skill for building scalable systems with Node.js, Express, Go, Python, Postgres, GraphQL, and REST. Covers API design, database optimization, security, auth, and performance tuning.",
+      "author": "ai-skills-registry",
+      "tags": [
+        "backend",
+        "api",
+        "database",
+        "security",
+        "performance"
+      ],
+      "path": "skills/senior-backend",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "examples.md",
+        "skill.json"
+      ]
+    },
+    {
       "name": "senior-frontend",
       "version": "1.0.0",
       "description": "Senior frontend skill — build modern, performant web apps with React, Next.js, TypeScript and Tailwind CSS",
@@ -227,6 +267,46 @@
         "compliance"
       ],
       "path": "skills/senior-security",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "examples.md",
+        "skill.json"
+      ]
+    },
+    {
+      "name": "seo-optimizer",
+      "version": "1.0.0",
+      "description": "Search Engine Optimization specialist for content strategy, technical SEO, keyword research, and ranking improvements. Expert in on-page SEO, meta tags, schema markup, and Core Web Vitals.",
+      "author": "ai-skills-registry",
+      "tags": [
+        "seo",
+        "content",
+        "marketing",
+        "performance",
+        "web"
+      ],
+      "path": "skills/seo-optimizer",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "examples.md",
+        "skill.json"
+      ]
+    },
+    {
+      "name": "streaming-ssr",
+      "version": "1.0.0",
+      "description": "Teaches streaming server-side rendering for chunked HTML delivery. Use when you need faster Time to First Byte and First Contentful Paint by streaming HTML as it's generated on the server.",
+      "author": "patterns.dev",
+      "tags": [
+        "react",
+        "ssr",
+        "streaming",
+        "performance",
+        "suspense"
+      ],
+      "path": "skills/streaming-ssr",
       "files": [
         "README.md",
         "SKILL.md",

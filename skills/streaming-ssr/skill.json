@@ -1,0 +1,7 @@
+{
+  "name": "streaming-ssr",
+  "version": "1.0.0",
+  "description": "Teaches streaming server-side rendering for chunked HTML delivery. Use when you need faster Time to First Byte and First Contentful Paint by streaming HTML as it's generated on the server.",
+  "author": "patterns.dev",
+  "tags": ["react", "ssr", "streaming", "performance", "suspense"]
+}
