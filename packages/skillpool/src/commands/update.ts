@@ -1,36 +1,47 @@
-import { fetchRegistry, findSkill } from "../registry.js";
-import { installSkill, readManifest } from "../installer.js";
+import { fetchRegistry, findResource, parseSpec } from "../registry.js";
+import { installResource, readManifest, splitKey } from "../installer.js";
 
-export async function updateCommand(name?: string): Promise<void> {
+export async function updateCommand(spec?: string): Promise<void> {
   const cwd = process.cwd();
   const reg = await fetchRegistry();
   const manifest = await readManifest(cwd);
 
-  const names = name ? [name] : Object.keys(manifest.installed);
-  if (names.length === 0) {
-    console.log("No installed skills to update.");
+  let keys = Object.keys(manifest.installed);
+
+  if (spec) {
+    const { type, name } = parseSpec(spec);
+    keys = keys.filter((k) => {
+      const s = splitKey(k);
+      return s.name === name && (!type || s.type === type);
+    });
+    if (keys.length === 0) {
+      console.error(`! ${spec} is not installed — nothing to update.`);
+      return;
+    }
+  }
+
+  if (keys.length === 0) {
+    console.log("No installed resources to update.");
     return;
   }
 
   let updated = 0;
-  for (const n of names) {
-    const installed = manifest.installed[n];
-    if (!installed) {
-      console.error(`! ${n} is not installed — skipping.`);
-      continue;
-    }
-    const entry = findSkill(reg, n);
+  for (const key of keys) {
+    const installed = manifest.installed[key];
+    if (!installed) continue;
+    const { type, name } = splitKey(key);
+    const entry = findResource(reg, name, type);
     if (!entry) {
-      console.error(`! ${n} no longer in registry — skipping.`);
+      console.error(`! ${key} no longer in registry — skipping.`);
       continue;
     }
     if (entry.version === installed.version) {
-      console.log(`= ${n}@${installed.version} up to date`);
+      console.log(`= ${key}@${installed.version} up to date`);
       continue;
     }
-    console.log(`↑ ${n} ${installed.version} → ${entry.version}`);
-    await installSkill(cwd, entry);
+    console.log(`↑ ${key} ${installed.version} → ${entry.version}`);
+    await installResource(cwd, entry);
     updated++;
   }
-  console.log(`\nDone. ${updated} skill(s) updated.`);
+  console.log(`\nDone. ${updated} resource(s) updated.`);
 }

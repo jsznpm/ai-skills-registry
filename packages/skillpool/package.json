@@ -1,7 +1,7 @@
 {
   "name": "skillpool",
-  "version": "1.0.4",
-  "description": "Package manager for the AI Skills Registry — list, search, add, remove skills",
+  "version": "2.1.0",
+  "description": "Package manager for the AI Skills Registry — list, search, add, remove skills, commands, and agents for Claude Code",
   "type": "module",
   "bin": {
     "skillpool": "dist/index.js"
@@ -17,7 +17,7 @@
     "dev": "tsup --watch",
     "start": "node dist/index.js"
   },
-  "keywords": ["ai", "skills", "cli", "registry", "agents"],
+  "keywords": ["ai", "skills", "commands", "agents", "cli", "registry", "claude-code"],
   "license": "MIT",
   "dependencies": {
     "commander": "^12.1.0"

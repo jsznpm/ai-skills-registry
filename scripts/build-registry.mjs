@@ -2,27 +2,34 @@
 /**
  * build-registry.mjs
  *
- * Scans skills/<name>/ folders, reads each skill.json, collects the full file
- * list of every skill folder, and writes a flat registry.json at repo root.
+ * Scans the registry's three resource trees and writes a flat registry.json at
+ * repo root:
+ *
+ *   skills/<name>/    — a folder + skill.json manifest + prompt files
+ *   commands/<name>.md — a single Claude Code slash command (YAML frontmatter)
+ *   agents/<name>.md   — a single Claude Code subagent     (YAML frontmatter)
  *
  * The CLI reads registry.json from GitHub raw at runtime. Because we record the
- * `files` array per skill here, the CLI never needs the GitHub API to list a
+ * `files` array per resource here, the CLI never needs the GitHub API to list a
  * folder — it fetches each file by raw URL directly.
  *
- * Run after adding/editing any skill:
+ * Run after adding/editing any resource:
  *   node scripts/build-registry.mjs
  */
 import { readdir, readFile, writeFile, stat } from "node:fs/promises";
-import { join, dirname, relative } from "node:path";
+import { join, dirname, relative, basename } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
-const SKILLS_DIR = join(ROOT, "skills");
 const OUT = join(ROOT, "registry.json");
 
-/** Recursively list files inside a skill folder, returned as POSIX paths
- *  relative to that folder (so nested files like rules/foo.md also work). */
+const SKILLS_DIR = join(ROOT, "skills");
+const COMMANDS_DIR = join(ROOT, "commands");
+const AGENTS_DIR = join(ROOT, "agents");
+
+/** Recursively list files inside a folder, returned as POSIX paths relative to
+ *  that folder (so nested files like rules/foo.md also work). */
 async function listFiles(dir, base = dir) {
   const entries = await readdir(dir, { withFileTypes: true });
   const files = [];
@@ -45,11 +52,53 @@ async function isDir(p) {
   }
 }
 
-async function main() {
-  if (!(await isDir(SKILLS_DIR))) {
-    throw new Error(`skills/ folder not found at ${SKILLS_DIR}`);
-  }
+/**
+ * Minimal dependency-free YAML frontmatter parser. Reads the leading
+ * `---\n...\n---` block and returns a flat object. Supports `key: value` and
+ * inline arrays `key: [a, b]` (also `key: "a, b"` is treated as a string).
+ * Quotes around scalars are stripped. Everything after the block is ignored —
+ * we only need the metadata here.
+ */
+function parseFrontmatter(text) {
+  const match = /^﻿?---\r?\n([\s\S]*?)\r?\n---/.exec(text);
+  if (!match) return {};
+  const body = match[1];
+  const out = {};
+  for (const rawLine of body.split(/\r?\n/)) {
+    const line = rawLine.trim();
+    if (!line || line.startsWith("#")) continue;
+    const colon = line.indexOf(":");
+    if (colon === -1) continue;
+    const key = line.slice(0, colon).trim();
+    let value = line.slice(colon + 1).trim();
+    if (!key) continue;
 
+    if (value.startsWith("[") && value.endsWith("]")) {
+      out[key] = value
+        .slice(1, -1)
+        .split(",")
+        .map((s) => unquote(s.trim()))
+        .filter(Boolean);
+    } else {
+      out[key] = unquote(value);
+    }
+  }
+  return out;
+}
+
+function unquote(s) {
+  if (
+    (s.startsWith('"') && s.endsWith('"')) ||
+    (s.startsWith("'") && s.endsWith("'"))
+  ) {
+    return s.slice(1, -1);
+  }
+  return s;
+}
+
+/** Build the skill entries (folder + skill.json). */
+async function scanSkills() {
+  if (!(await isDir(SKILLS_DIR))) return [];
   const entries = await readdir(SKILLS_DIR, { withFileTypes: true });
   const skills = [];
 
@@ -62,7 +111,9 @@ async function main() {
     try {
       manifest = JSON.parse(await readFile(manifestPath, "utf8"));
     } catch (err) {
-      console.warn(`! skipping ${entry.name}: missing/invalid skill.json (${err.message})`);
+      console.warn(
+        `! skipping skill ${entry.name}: missing/invalid skill.json (${err.message})`
+      );
       continue;
     }
 
@@ -75,6 +126,7 @@ async function main() {
     const files = await listFiles(skillDir);
 
     skills.push({
+      type: "skill",
       name: entry.name,
       version: manifest.version ?? "0.0.0",
       description: manifest.description ?? "",
@@ -85,17 +137,84 @@ async function main() {
     });
   }
 
-  skills.sort((a, b) => a.name.localeCompare(b.name));
+  return skills.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+/**
+ * Build entries for the single-file resource types (commands, agents). Each
+ * `*.md` file in the folder is one resource; metadata comes from its YAML
+ * frontmatter. `path` is the folder, `files` is the single markdown filename.
+ */
+async function scanSingleFile(type, dir, folderName) {
+  if (!(await isDir(dir))) return [];
+  const entries = await readdir(dir, { withFileTypes: true });
+  const out = [];
+
+  for (const entry of entries) {
+    if (!entry.isFile() || !entry.name.endsWith(".md")) continue;
+    const fileName = entry.name;
+    const fallbackName = basename(fileName, ".md");
+
+    let fm = {};
+    try {
+      fm = parseFrontmatter(await readFile(join(dir, fileName), "utf8"));
+    } catch (err) {
+      console.warn(`! ${type} ${fileName}: could not read (${err.message})`);
+      continue;
+    }
+
+    if (fm.name && fm.name !== fallbackName) {
+      console.warn(
+        `! ${fileName}: frontmatter name "${fm.name}" != file name. Using file name.`
+      );
+    }
+
+    out.push({
+      type,
+      name: fallbackName,
+      version: fm.version ?? "0.0.0",
+      description: fm.description ?? "",
+      author: fm.author ?? "ai-skills-registry",
+      tags: Array.isArray(fm.tags) ? fm.tags : [],
+      path: folderName,
+      files: [fileName],
+    });
+  }
+
+  return out.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+async function main() {
+  const [skills, commands, agents] = await Promise.all([
+    scanSkills(),
+    scanSingleFile("command", COMMANDS_DIR, "commands"),
+    scanSingleFile("agent", AGENTS_DIR, "agents"),
+  ]);
+
+  const counts = {
+    skills: skills.length,
+    commands: commands.length,
+    agents: agents.length,
+  };
+  const total = counts.skills + counts.commands + counts.agents;
 
   const registry = {
     generatedAt: new Date().toISOString(),
-    count: skills.length,
+    count: total,
+    counts,
     skills,
+    commands,
+    agents,
   };
 
   await writeFile(OUT, JSON.stringify(registry, null, 2) + "\n", "utf8");
-  console.log(`✓ registry.json written — ${skills.length} skill(s)`);
-  for (const s of skills) console.log(`  - ${s.name}@${s.version} (${s.files.length} files)`);
+  console.log(
+    `✓ registry.json written — ${total} resource(s): ` +
+      `${counts.skills} skill(s), ${counts.commands} command(s), ${counts.agents} agent(s)`
+  );
+  for (const r of [...skills, ...commands, ...agents]) {
+    console.log(`  - [${r.type}] ${r.name}@${r.version} (${r.files.length} file(s))`);
+  }
 }
 
 main().catch((err) => {

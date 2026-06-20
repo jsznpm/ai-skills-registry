@@ -35,6 +35,29 @@ export function sourceUrl(...parts: string[]): string {
   return resolve(src, ...parts);
 }
 
-/** Install target inside the user's project. */
+/** The resource types the registry can hold. */
+export type ResourceType = "skill" | "command" | "agent";
+
+/** Base directory for all installed Claude Code resources. */
+export const CLAUDE_DIR = ".claude";
+
+/** Install target for skills (also where the manifest lives). */
 export const SKILLS_DIR = ".claude/skills";
 export const MANIFEST_FILE = "manifest.json";
+
+/** Install target directory for a given resource type, inside the user's project.
+ *  skill   -> .claude/skills   (one folder per skill)
+ *  command -> .claude/commands (one .md per command)
+ *  agent   -> .claude/agents   (one .md per agent)
+ */
+export function targetDir(type: ResourceType): string {
+  switch (type) {
+    case "command":
+      return `${CLAUDE_DIR}/commands`;
+    case "agent":
+      return `${CLAUDE_DIR}/agents`;
+    case "skill":
+    default:
+      return SKILLS_DIR;
+  }
+}

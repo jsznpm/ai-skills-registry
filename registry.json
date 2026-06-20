@@ -1,8 +1,14 @@
 {
-  "generatedAt": "2026-06-20T05:27:18.363Z",
-  "count": 23,
+  "generatedAt": "2026-06-20T05:49:27.408Z",
+  "count": 28,
+  "counts": {
+    "skills": 23,
+    "commands": 3,
+    "agents": 2
+  },
   "skills": [
     {
+      "type": "skill",
       "name": "ai-ui-patterns",
       "version": "1.0.0",
       "description": "Teaches design patterns for building AI-powered React interfaces. Use when creating chatbots, intelligent assistants, streaming UIs, or any AI-driven user experience in React.",
@@ -23,6 +29,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "brainstorming",
       "version": "1.0.0",
       "description": "Turn rough ideas into fully formed designs and specs through collaborative dialogue — one question at a time, explore alternatives, validate the design in sections before any implementation.",
@@ -43,6 +50,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "canvas-design",
       "version": "1.0.0",
       "description": "Create beautiful, original visual art as .png and .pdf — posters, designs, and static pieces — by first authoring a design philosophy, then expressing it on a canvas with museum-quality craftsmanship.",
@@ -63,6 +71,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "code-documentation-generator",
       "version": "1.0.0",
       "description": "Generates professional Markdown documentation (README.md, API_DOCS.md, optional IMPLEMENTATION_NOTES.md) from source code in any language",
@@ -83,6 +92,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "code-reviewer",
       "version": "1.0.0",
       "description": "Code reviewer skill — correctness, readability, security findings",
@@ -99,6 +109,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "code-to-lesson",
       "version": "1.0.0",
       "description": "Analyzes a code project end-to-end and writes a deep-dive engineering tutorial to code_tutorial.md",
@@ -120,6 +131,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "diff-reviewer",
       "version": "1.0.0",
       "description": "Diff reviewer skill — review only changed hunks for bugs and risks",
@@ -139,6 +151,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "docx",
       "version": "1.0.0",
       "description": "Create, read, edit, and manipulate Word (.docx) documents. Generate professional documents with tables of contents, headings, page numbers, tables, images, footnotes, and headers/footers via docx-js; edit existing files by unpacking/repacking XML; handle tracked changes and comments.",
@@ -158,6 +171,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "frontend-design",
       "version": "1.0.0",
       "description": "Create distinctive, production-grade frontend interfaces with high design quality that avoid generic AI aesthetics",
@@ -177,6 +191,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "mobile-design",
       "version": "1.0.0",
       "description": "Mobile-first design thinking and decision-making for iOS and Android apps. Touch interaction, performance patterns, platform conventions. Teaches principles, not fixed values. Use when building React Native, Flutter, or native mobile apps.",
@@ -212,6 +227,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "node-backend",
       "version": "1.0.0",
       "description": "Node.js backend skill — API design, error handling, security",
@@ -229,6 +245,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "progit-commit",
       "version": "1.0.0",
       "description": "Generates professional, Conventional Commits–style git commit messages by analyzing the staged diff",
@@ -249,6 +266,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "python-backend",
       "version": "1.0.0",
       "description": "Python backend skill — API design, async, error handling, security",
@@ -267,6 +285,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "react-architect",
       "version": "1.0.0",
       "description": "Senior React architect skill — component design, state, performance",
@@ -285,6 +304,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "react-best-practices",
       "version": "1.0.0",
       "description": "Comprehensive React and Next.js performance optimization guide with 40+ rules for eliminating waterfalls, optimizing bundles, and improving rendering",
@@ -307,6 +327,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "senior-architect",
       "version": "1.0.0",
       "description": "Software architecture skill for designing scalable, maintainable systems across React, Next.js, Node.js, Express, React Native, Swift, Kotlin, Flutter, Postgres, GraphQL, Go, and Python. Covers system design patterns, tech-stack decision frameworks, trade-off analysis, and integration design.",
@@ -327,6 +348,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "senior-backend",
       "version": "1.0.0",
       "description": "Comprehensive backend development skill for building scalable systems with Node.js, Express, Go, Python, Postgres, GraphQL, and REST. Covers API design, database optimization, security, auth, and performance tuning.",
@@ -347,6 +369,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "senior-frontend",
       "version": "1.0.0",
       "description": "Senior frontend skill — build modern, performant web apps with React, Next.js, TypeScript and Tailwind CSS",
@@ -368,6 +391,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "senior-prompt-engineer",
       "version": "1.0.0",
       "description": "Prompt engineering skill for LLM optimization, structured outputs, and AI product development. Covers prompt patterns, few-shot and chain-of-thought, RAG optimization, agent design, evaluation, and LLM system architecture across Claude and GPT models.",
@@ -388,6 +412,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "senior-security",
       "version": "1.0.0",
       "description": "Senior security engineering skill — threat modeling, secure architecture, authorized pentesting, cryptography and compliance auditing",
@@ -409,6 +434,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "seo-optimizer",
       "version": "1.0.0",
       "description": "Search Engine Optimization specialist for content strategy, technical SEO, keyword research, and ranking improvements. Expert in on-page SEO, meta tags, schema markup, and Core Web Vitals.",
@@ -429,6 +455,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "streaming-ssr",
       "version": "1.0.0",
       "description": "Teaches streaming server-side rendering for chunked HTML delivery. Use when you need faster Time to First Byte and First Contentful Paint by streaming HTML as it's generated on the server.",
@@ -449,6 +476,7 @@
       ]
     },
     {
+      "type": "skill",
       "name": "upgrade-project",
       "version": "1.0.0",
       "description": "Upgrades npm dependencies in a project safely — checks outdated packages, bumps versions, runs tests, and reports breaking changes",
@@ -466,6 +494,95 @@
         "SKILL.md",
         "examples.md",
         "skill.json"
+      ]
+    }
+  ],
+  "commands": [
+    {
+      "type": "command",
+      "name": "commit",
+      "version": "1.0.0",
+      "description": "Write a Conventional Commits message for the currently staged changes and create the commit.",
+      "author": "ai-skills-registry",
+      "tags": [
+        "git",
+        "commit",
+        "conventional-commits",
+        "workflow"
+      ],
+      "path": "commands",
+      "files": [
+        "commit.md"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "explain",
+      "version": "1.0.0",
+      "description": "Explain how a file, function, or selected code works in clear, layered detail.",
+      "author": "ai-skills-registry",
+      "tags": [
+        "explain",
+        "onboarding",
+        "documentation",
+        "learning"
+      ],
+      "path": "commands",
+      "files": [
+        "explain.md"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "review-diff",
+      "version": "1.0.0",
+      "description": "Review the current uncommitted diff for bugs, smells, and quick wins, reporting findings inline in chat.",
+      "author": "ai-skills-registry",
+      "tags": [
+        "review",
+        "git",
+        "diff",
+        "quality"
+      ],
+      "path": "commands",
+      "files": [
+        "review-diff.md"
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "type": "agent",
+      "name": "code-reviewer",
+      "version": "1.0.0",
+      "description": "Use to review a diff, branch, or file for correctness bugs and quality issues. Returns severity-tagged, one-line findings with no scope creep.",
+      "author": "ai-skills-registry",
+      "tags": [
+        "review",
+        "quality",
+        "security",
+        "diff"
+      ],
+      "path": "agents",
+      "files": [
+        "code-reviewer.md"
+      ]
+    },
+    {
+      "type": "agent",
+      "name": "test-writer",
+      "version": "1.0.0",
+      "description": "Use to write focused unit/integration tests for a given function, module, or change. Follows the project's existing test framework and conventions.",
+      "author": "ai-skills-registry",
+      "tags": [
+        "testing",
+        "unit-tests",
+        "quality",
+        "tdd"
+      ],
+      "path": "agents",
+      "files": [
+        "test-writer.md"
       ]
     }
   ]

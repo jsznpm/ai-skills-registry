@@ -16,8 +16,8 @@ program.addHelpText("beforeAll", BANNER);
 
 program
   .name("skillpool")
-  .description("Package manager for the AI Skills Registry")
-  .version("1.0.0")
+  .description("Package manager for the AI Skills Registry (skills, commands, agents)")
+  .version("2.1.0")
   .option(
     "-r, --registry <source>",
     "registry source (http url or local folder path)"
@@ -28,33 +28,36 @@ program
 
 program
   .command("list")
-  .description("list all skills in the registry")
+  .description("list/select resources; interactive picker installs your selection")
   .option("-l, --long", "show version and description")
+  .option("-t, --type <type>", "filter by type: skill | command | agent")
   .action(listCommand);
 
 program
   .command("search <query>")
-  .description("search skills by name, description, or tag")
+  .description("search resources by name, description, or tag")
   .action(searchCommand);
 
 program
-  .command("add <skill>")
-  .description("install a skill into ./.claude/skills (supports name@version)")
+  .command("add [resource]")
+  .description(
+    "install a resource into ./.claude (supports type:name@version); no arg opens picker"
+  )
   .action(addCommand);
 
 program
-  .command("info <skill>")
-  .description("show details for a skill")
+  .command("info <resource>")
+  .description("show details for a resource (supports type:name)")
   .action(infoCommand);
 
 program
-  .command("remove <skill>")
-  .description("remove an installed skill from ./.claude/skills")
+  .command("remove <resource>")
+  .description("remove an installed resource (supports type:name)")
   .action(removeCommand);
 
 program
-  .command("update [skill]")
-  .description("update installed skills (all, or one) to registry version")
+  .command("update [resource]")
+  .description("update installed resources (all, or one) to registry version")
   .action(updateCommand);
 
 program.parseAsync(process.argv).catch((err: unknown) => {
