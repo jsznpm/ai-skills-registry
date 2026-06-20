@@ -1,0 +1,7 @@
+{
+  "name": "mobile-design",
+  "version": "1.0.0",
+  "description": "Mobile-first design thinking and decision-making for iOS and Android apps. Touch interaction, performance patterns, platform conventions. Teaches principles, not fixed values. Use when building React Native, Flutter, or native mobile apps.",
+  "author": "ai-skills-registry",
+  "tags": ["mobile", "ios", "android", "react-native", "flutter", "ux", "performance"]
+}

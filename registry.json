@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-20T04:53:19.530Z",
-  "count": 20,
+  "generatedAt": "2026-06-20T05:27:18.363Z",
+  "count": 23,
   "skills": [
     {
       "name": "ai-ui-patterns",
@@ -139,6 +139,25 @@
       ]
     },
     {
+      "name": "docx",
+      "version": "1.0.0",
+      "description": "Create, read, edit, and manipulate Word (.docx) documents. Generate professional documents with tables of contents, headings, page numbers, tables, images, footnotes, and headers/footers via docx-js; edit existing files by unpacking/repacking XML; handle tracked changes and comments.",
+      "author": "ai-skills-registry",
+      "tags": [
+        "docx",
+        "word",
+        "documents",
+        "office",
+        "tracked-changes"
+      ],
+      "path": "skills/docx",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "skill.json"
+      ]
+    },
+    {
       "name": "frontend-design",
       "version": "1.0.0",
       "description": "Create distinctive, production-grade frontend interfaces with high design quality that avoid generic AI aesthetics",
@@ -155,6 +174,41 @@
         "README.md",
         "SKILL.md",
         "skill.json"
+      ]
+    },
+    {
+      "name": "mobile-design",
+      "version": "1.0.0",
+      "description": "Mobile-first design thinking and decision-making for iOS and Android apps. Touch interaction, performance patterns, platform conventions. Teaches principles, not fixed values. Use when building React Native, Flutter, or native mobile apps.",
+      "author": "ai-skills-registry",
+      "tags": [
+        "mobile",
+        "ios",
+        "android",
+        "react-native",
+        "flutter",
+        "ux",
+        "performance"
+      ],
+      "path": "skills/mobile-design",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "decision-trees.md",
+        "examples.md",
+        "mobile-backend.md",
+        "mobile-color-system.md",
+        "mobile-debugging.md",
+        "mobile-design-thinking.md",
+        "mobile-navigation.md",
+        "mobile-performance.md",
+        "mobile-testing.md",
+        "mobile-typography.md",
+        "platform-android.md",
+        "platform-ios.md",
+        "scripts/mobile_audit.py",
+        "skill.json",
+        "touch-psychology.md"
       ]
     },
     {
@@ -306,6 +360,26 @@
         "performance"
       ],
       "path": "skills/senior-frontend",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "examples.md",
+        "skill.json"
+      ]
+    },
+    {
+      "name": "senior-prompt-engineer",
+      "version": "1.0.0",
+      "description": "Prompt engineering skill for LLM optimization, structured outputs, and AI product development. Covers prompt patterns, few-shot and chain-of-thought, RAG optimization, agent design, evaluation, and LLM system architecture across Claude and GPT models.",
+      "author": "ai-skills-registry",
+      "tags": [
+        "prompt-engineering",
+        "llm",
+        "rag",
+        "agents",
+        "evaluation"
+      ],
+      "path": "skills/senior-prompt-engineer",
       "files": [
         "README.md",
         "SKILL.md",
