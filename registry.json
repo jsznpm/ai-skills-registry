@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-17T17:08:24.953Z",
-  "count": 17,
+  "generatedAt": "2026-06-20T04:53:19.530Z",
+  "count": 20,
   "skills": [
     {
       "name": "ai-ui-patterns",
@@ -15,6 +15,46 @@
         "ui"
       ],
       "path": "skills/ai-ui-patterns",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "examples.md",
+        "skill.json"
+      ]
+    },
+    {
+      "name": "brainstorming",
+      "version": "1.0.0",
+      "description": "Turn rough ideas into fully formed designs and specs through collaborative dialogue — one question at a time, explore alternatives, validate the design in sections before any implementation.",
+      "author": "ai-skills-registry",
+      "tags": [
+        "brainstorming",
+        "design",
+        "planning",
+        "requirements",
+        "spec"
+      ],
+      "path": "skills/brainstorming",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "examples.md",
+        "skill.json"
+      ]
+    },
+    {
+      "name": "canvas-design",
+      "version": "1.0.0",
+      "description": "Create beautiful, original visual art as .png and .pdf — posters, designs, and static pieces — by first authoring a design philosophy, then expressing it on a canvas with museum-quality craftsmanship.",
+      "author": "ai-skills-registry",
+      "tags": [
+        "design",
+        "visual-art",
+        "poster",
+        "typography",
+        "pdf"
+      ],
+      "path": "skills/canvas-design",
       "files": [
         "README.md",
         "SKILL.md",
@@ -209,6 +249,26 @@
         "README.md",
         "SKILL.md",
         "references/react-performance-guidelines.md",
+        "skill.json"
+      ]
+    },
+    {
+      "name": "senior-architect",
+      "version": "1.0.0",
+      "description": "Software architecture skill for designing scalable, maintainable systems across React, Next.js, Node.js, Express, React Native, Swift, Kotlin, Flutter, Postgres, GraphQL, Go, and Python. Covers system design patterns, tech-stack decision frameworks, trade-off analysis, and integration design.",
+      "author": "ai-skills-registry",
+      "tags": [
+        "architecture",
+        "system-design",
+        "scalability",
+        "tech-stack",
+        "trade-offs"
+      ],
+      "path": "skills/senior-architect",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "examples.md",
         "skill.json"
       ]
     },

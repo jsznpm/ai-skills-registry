@@ -1,0 +1,7 @@
+{
+  "name": "senior-architect",
+  "version": "1.0.0",
+  "description": "Software architecture skill for designing scalable, maintainable systems across React, Next.js, Node.js, Express, React Native, Swift, Kotlin, Flutter, Postgres, GraphQL, Go, and Python. Covers system design patterns, tech-stack decision frameworks, trade-off analysis, and integration design.",
+  "author": "ai-skills-registry",
+  "tags": ["architecture", "system-design", "scalability", "tech-stack", "trade-offs"]
+}
