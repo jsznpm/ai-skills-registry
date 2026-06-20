@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-20T05:49:27.408Z",
-  "count": 28,
+  "generatedAt": "2026-06-20T06:32:39.521Z",
+  "count": 29,
   "counts": {
     "skills": 23,
-    "commands": 3,
+    "commands": 4,
     "agents": 2
   },
   "skills": [
@@ -547,6 +547,24 @@
       "path": "commands",
       "files": [
         "review-diff.md"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "update-docs",
+      "version": "1.0.0",
+      "description": "Systematically update project documentation to match implementation status, API changes, and recent work — synchronizing specs, README, and CLAUDE.md.",
+      "author": "ai-skills-registry",
+      "tags": [
+        "docs",
+        "documentation",
+        "sync",
+        "specs",
+        "maintenance"
+      ],
+      "path": "commands",
+      "files": [
+        "update-docs.md"
       ]
     }
   ],
