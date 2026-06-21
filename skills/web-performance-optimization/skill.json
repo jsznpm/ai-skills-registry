@@ -1,0 +1,7 @@
+{
+  "name": "web-performance-optimization",
+  "version": "1.0.0",
+  "description": "Optimize website and web application performance including loading speed, Core Web Vitals, bundle size, caching strategies, and runtime performance",
+  "author": "ai-skills-registry",
+  "tags": ["performance", "web", "core-web-vitals", "optimization", "frontend"]
+}

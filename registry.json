@@ -1,12 +1,33 @@
 {
-  "generatedAt": "2026-06-20T13:46:05.283Z",
-  "count": 32,
+  "generatedAt": "2026-06-21T13:56:04.058Z",
+  "count": 35,
   "counts": {
-    "skills": 23,
+    "skills": 26,
     "commands": 6,
     "agents": 3
   },
   "skills": [
+    {
+      "type": "skill",
+      "name": "3d-web-experience",
+      "version": "1.0.0",
+      "description": "Expert in building 3D experiences for the web - Three.js, React Three Fiber, Spline, WebGL, and interactive 3D scenes. Covers product configurators, 3D portfolios, immersive websites, and bringing depth to web experiences",
+      "author": "ai-skills-registry",
+      "tags": [
+        "3d",
+        "threejs",
+        "webgl",
+        "react-three-fiber",
+        "spline",
+        "frontend"
+      ],
+      "path": "skills/3d-web-experience",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "skill.json"
+      ]
+    },
     {
       "type": "skill",
       "name": "ai-ui-patterns",
@@ -184,6 +205,27 @@
         "aesthetics"
       ],
       "path": "skills/frontend-design",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "skill.json"
+      ]
+    },
+    {
+      "type": "skill",
+      "name": "frontend-dev-guidelines",
+      "version": "1.0.0",
+      "description": "Frontend development guidelines for React/TypeScript applications. Modern patterns including Suspense, lazy loading, useSuspenseQuery, file organization with features directory, MUI v7 styling, TanStack Router, performance optimization, and TypeScript best practices",
+      "author": "ai-skills-registry",
+      "tags": [
+        "react",
+        "typescript",
+        "frontend",
+        "tanstack",
+        "mui",
+        "suspense"
+      ],
+      "path": "skills/frontend-dev-guidelines",
       "files": [
         "README.md",
         "SKILL.md",
@@ -493,6 +535,26 @@
         "README.md",
         "SKILL.md",
         "examples.md",
+        "skill.json"
+      ]
+    },
+    {
+      "type": "skill",
+      "name": "web-performance-optimization",
+      "version": "1.0.0",
+      "description": "Optimize website and web application performance including loading speed, Core Web Vitals, bundle size, caching strategies, and runtime performance",
+      "author": "ai-skills-registry",
+      "tags": [
+        "performance",
+        "web",
+        "core-web-vitals",
+        "optimization",
+        "frontend"
+      ],
+      "path": "skills/web-performance-optimization",
+      "files": [
+        "README.md",
+        "SKILL.md",
         "skill.json"
       ]
     }
