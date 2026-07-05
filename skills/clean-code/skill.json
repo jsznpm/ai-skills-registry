@@ -1,0 +1,7 @@
+{
+  "name": "clean-code",
+  "version": "2.0.0",
+  "description": "Pragmatic coding standards - concise, direct, no over-engineering, no unnecessary comments",
+  "author": "ai-skills-registry",
+  "tags": ["clean-code", "standards", "refactoring", "best-practices", "code-quality"]
+}

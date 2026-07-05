@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-21T13:56:04.058Z",
-  "count": 35,
+  "generatedAt": "2026-07-05T15:07:19.451Z",
+  "count": 38,
   "counts": {
-    "skills": 26,
+    "skills": 29,
     "commands": 6,
     "agents": 3
   },
@@ -93,6 +93,26 @@
     },
     {
       "type": "skill",
+      "name": "clean-code",
+      "version": "2.0.0",
+      "description": "Pragmatic coding standards - concise, direct, no over-engineering, no unnecessary comments",
+      "author": "ai-skills-registry",
+      "tags": [
+        "clean-code",
+        "standards",
+        "refactoring",
+        "best-practices",
+        "code-quality"
+      ],
+      "path": "skills/clean-code",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "skill.json"
+      ]
+    },
+    {
+      "type": "skill",
       "name": "code-documentation-generator",
       "version": "1.0.0",
       "description": "Generates professional Markdown documentation (README.md, API_DOCS.md, optional IMPLEMENTATION_NOTES.md) from source code in any language",
@@ -148,6 +168,33 @@
         "README.md",
         "SKILL.md",
         "examples.md",
+        "skill.json"
+      ]
+    },
+    {
+      "type": "skill",
+      "name": "content-creator",
+      "version": "1.0.0",
+      "description": "Create SEO-optimized marketing content with consistent brand voice. Includes brand voice analyzer, SEO optimizer, content frameworks, and social media templates. Use when writing blog posts, creating social media content, analyzing brand voice, optimizing SEO, planning content calendars, or when user mentions content creation, brand voice, SEO optimization, social media marketing, or content strategy.",
+      "author": "Alireza Rezvani",
+      "tags": [
+        "content-creation",
+        "seo",
+        "brand-voice",
+        "social-media",
+        "content-strategy",
+        "marketing"
+      ],
+      "path": "skills/content-creator",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "assets/content_calendar_template.md",
+        "references/brand_guidelines.md",
+        "references/content_frameworks.md",
+        "references/social_media_optimization.md",
+        "scripts/brand_voice_analyzer.py",
+        "scripts/seo_optimizer.py",
         "skill.json"
       ]
     },
@@ -229,6 +276,32 @@
       "files": [
         "README.md",
         "SKILL.md",
+        "skill.json"
+      ]
+    },
+    {
+      "type": "skill",
+      "name": "mcp-builder",
+      "version": "1.0.0",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "author": "ai-skills-registry",
+      "tags": [
+        "mcp",
+        "model-context-protocol",
+        "typescript",
+        "python",
+        "server",
+        "tools",
+        "integration"
+      ],
+      "path": "skills/mcp-builder",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "reference/evaluation.md",
+        "reference/mcp_best_practices.md",
+        "reference/node_mcp_server.md",
+        "reference/python_mcp_server.md",
         "skill.json"
       ]
     },
