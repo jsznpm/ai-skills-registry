@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "build:registry": "node scripts/build-registry.mjs",
-    "build:cli": "npm run build --workspace skillpool"
+    "build:cli": "npm run build --workspace skillpool",
+    "build:cli-tui": "npm run build --workspace agentpool"
   },
   "license": "MIT"
 }
