@@ -1,30 +1,52 @@
-feat(skillpool): add CLI banner, two skills, and skill scaffolder
+feat(agenticpool): add Ink TUI package manager as skillpool sibling
 
 Description:
-- Show a branded ASCII banner with author credit on bare invocation and help,
-  while keeping command output clean so piping and scripting are unaffected
-- Add a diff-reviewer skill that reviews only changed hunks of a git diff for
-  bugs, regressions, and risks before commit
-- Add a python-backend skill covering API design, async correctness, error
-  handling, and security for Python services
-- Add a project-scoped scaffolder skill that creates a new registry skill and
-  regenerates the index, so adding skills follows one consistent flow
-- Refresh the generated registry index to publish the new skills
+- Introduce agenticpool, a separately publishable CLI offering the same registry
+  install workflow as skillpool but with a full-screen Ink (React) interface
+  instead of a raw-readline picker
+- Add tabbed browsing by resource type (skills, commands, agents), per-tab
+  pagination, multi-select, and live per-file install progress
+- Fork the core registry/config/installer/color logic rather than depending on
+  skillpool, keeping the new package fully standalone for independent
+  publishing and versioning
+- Read and write the same .claude/skills/manifest.json schema as skillpool so
+  installs, removals, and updates remain interoperable between both tools
+- Lazily import the Ink runtime only on interactive TTY code paths, keeping
+  non-interactive commands (search, info, remove, update, list --long) free of
+  any React/Ink overhead
+- Wire the new package into the workspace build scripts and document the CLI,
+  keybindings, and cross-tool manifest compatibility
 
 Impact:
-- Users see clear branding when exploring the CLI without losing parseable output
-- New skills become installable immediately after pushing, with no CLI release
+- Registry consumers gain an alternative install experience with grouped,
+  paginated browsing without affecting existing skillpool users
+- Both CLIs can be installed and used interchangeably against the same
+  project without manifest conflicts
 
 Affected Components:
-- .claude/skills/add-registry-skill/SKILL.md
-- packages/skillpool/src/banner.ts
-- packages/skillpool/src/index.ts
-- registry.json
-- skills/diff-reviewer/README.md
-- skills/diff-reviewer/examples.md
-- skills/diff-reviewer/skill.json
-- skills/diff-reviewer/system.md
-- skills/python-backend/README.md
-- skills/python-backend/examples.md
-- skills/python-backend/skill.json
-- skills/python-backend/system.md
+- CLAUDE.md
+- package-lock.json
+- package.json
+- packages/agenticpool/README.md
+- packages/agenticpool/package.json
+- packages/agenticpool/src/banner.ts
+- packages/agenticpool/src/colors.ts
+- packages/agenticpool/src/commands/add.ts
+- packages/agenticpool/src/commands/info.ts
+- packages/agenticpool/src/commands/list.ts
+- packages/agenticpool/src/commands/remove.ts
+- packages/agenticpool/src/commands/search.ts
+- packages/agenticpool/src/commands/update.ts
+- packages/agenticpool/src/config.ts
+- packages/agenticpool/src/index.ts
+- packages/agenticpool/src/installer.ts
+- packages/agenticpool/src/registry.ts
+- packages/agenticpool/src/tui/App.tsx
+- packages/agenticpool/src/tui/Footer.tsx
+- packages/agenticpool/src/tui/InstallProgress.tsx
+- packages/agenticpool/src/tui/ResourceList.tsx
+- packages/agenticpool/src/tui/Tabs.tsx
+- packages/agenticpool/src/tui/runInstallTui.ts
+- packages/agenticpool/src/tui/types.ts
+- packages/agenticpool/tsconfig.json
+- packages/agenticpool/tsup.config.ts

@@ -16,14 +16,14 @@ A monorepo with two halves that share one data file:
      to `.claude/agents/<name>.md`.
 2. **The `skillpool` CLI** (`packages/skillpool/`) — published to npm. A package
    manager that installs resources into a consuming project's `.claude/`.
-3. **The `agentpool` CLI** (`packages/agentpool/`) — a second, separately
+3. **The `agenticpool` CLI** (`packages/agenticpool/`) — a second, separately
    published npm package doing the same job as skillpool but with an Ink
    (React) full-screen TUI (tabs per resource type, pagination, multi-select)
    instead of skillpool's raw-readline picker. It forks skillpool's core logic
    (`config.ts`/`registry.ts`/`installer.ts`) rather than depending on it, but
    reads/writes the exact same `.claude/skills/manifest.json`, so installs and
    removals are interoperable between the two tools. Test locally the same way:
-   `node packages/agentpool/dist/index.js --registry . list`.
+   `node packages/agenticpool/dist/index.js --registry . list`.
 
 The two are decoupled by **`registry.json`**: an auto-generated flat index with a
 `skills[]`, `commands[]`, and `agents[]` array, each listing every resource of that

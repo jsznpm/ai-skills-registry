@@ -1,4 +1,4 @@
-# agentpool
+# agenticpool
 
 Package manager for the [AI Skills Registry](../../README.md) — the Ink TUI
 edition of [skillpool](../skillpool). Installs three kinds of Claude Code
@@ -13,33 +13,35 @@ resources into your project's `.claude/` folder:
 ## Install
 
 ```bash
-npm i -g agentpool
+npm i -g claude-agentpool
 # or
-npx agentpool <command>
+npx claude-agentpool <command>
 ```
+
+(npm package is `claude-agentpool`; the installed command is `agenticpool`.)
 
 ## Commands
 
 ```bash
-agentpool list                  # interactive TUI (installs your selection)
-agentpool list --long           # plain list with version + description
-agentpool list --type agent     # filter by type: skill | command | agent
-agentpool search react          # search all types by name / description / tag
+agenticpool list                  # interactive TUI (installs your selection)
+agenticpool list --long           # plain list with version + description
+agenticpool list --type agent     # filter by type: skill | command | agent
+agenticpool search react          # search all types by name / description / tag
 
-agentpool add                   # no arg → open the TUI
-agentpool add react-architect   # install by name (when unique across types)
-agentpool add command:commit    # disambiguate with type:name
-agentpool add agent:code-reviewer@1.0.0
+agenticpool add                   # no arg → open the TUI
+agenticpool add react-architect   # install by name (when unique across types)
+agenticpool add command:commit    # disambiguate with type:name
+agenticpool add agent:code-reviewer@1.0.0
 
-agentpool info command:commit   # details + file list
-agentpool remove command:commit # remove an installed resource
-agentpool update                # update all installed
-agentpool update skill:docx
+agenticpool info command:commit   # details + file list
+agenticpool remove command:commit # remove an installed resource
+agenticpool update                # update all installed
+agenticpool update skill:docx
 ```
 
 ### TUI controls
 
-`agentpool list` (in a TTY) and `agentpool add` with no argument open a
+`agenticpool list` (in a TTY) and `agenticpool add` with no argument open a
 full-screen picker: tabs across the top (Skills | Commands | Agents), each
 with its own paginated, multi-select list.
 
@@ -66,7 +68,7 @@ are tracked in `.claude/skills/manifest.json` keyed by `type:name`.
 
 ### Interoperability with skillpool
 
-agentpool and skillpool read/write the exact same
+agenticpool and skillpool read/write the exact same
 `.claude/skills/manifest.json`. You can install a resource with one and
 `remove`/`update` it with the other — they track the same state.
 
@@ -76,8 +78,8 @@ By default the CLI reads `registry.json` from the public GitHub raw URL.
 Override for testing or private registries:
 
 ```bash
-agentpool --registry ./path/to/ai-skills-registry list   # local folder
-AGENTPOOL_REGISTRY=https://raw.githubusercontent.com/you/repo/main agentpool list
+agenticpool --registry ./path/to/ai-skills-registry list   # local folder
+AGENTICPOOL_REGISTRY=https://raw.githubusercontent.com/you/repo/main agenticpool list
 ```
 
 ## How it works
@@ -85,4 +87,4 @@ AGENTPOOL_REGISTRY=https://raw.githubusercontent.com/you/repo/main agentpool lis
 The CLI never hardcodes the resource list. At runtime it fetches `registry.json`,
 which lists every skill, command, and agent plus the files each contains, and
 downloads them by raw URL. Adding a new resource to the registry repo requires
-**no CLI release** — the next `agentpool list` sees it automatically.
+**no CLI release** — the next `agenticpool list` sees it automatically.

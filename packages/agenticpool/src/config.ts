@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 /**
  * Where the registry lives. Resolution order:
  *   1. --registry <url|path>   (CLI flag, set via setRegistry)
- *   2. AGENTPOOL_REGISTRY env  (url or local folder path — great for testing)
+ *   2. AGENTICPOOL_REGISTRY env  (url or local folder path — great for testing)
  *   3. default GitHub raw base
  *
  * A "registry source" is a base location that contains registry.json and the
@@ -19,7 +19,7 @@ export function setRegistry(value?: string) {
 }
 
 export function getRegistrySource(): string {
-  const src = override ?? process.env.AGENTPOOL_REGISTRY ?? DEFAULT_REGISTRY;
+  const src = override ?? process.env.AGENTICPOOL_REGISTRY ?? DEFAULT_REGISTRY;
   return src.replace(/\/+$/, "");
 }
 

@@ -9,22 +9,22 @@ export const BANNER = color.cyan(`
 ███████ ██   ███ █████   ██ ██  ██    ██    ██████  ██    ██ ██    ██ ██
 ██   ██ ██    ██ ██      ██  ██ ██    ██    ██       ██    ██ ██    ██ ██
 ██   ██  ██████  ███████ ██   ████    ██    ██        ██████   ██████  ███████`) +
-  color.dim("\n  agentpool — Ink TUI edition\n");
+  color.dim("\n  agenticpool — Ink TUI edition\n");
 
 export function printBanner(): void {
   console.log(BANNER);
 }
 
 /** Marker file proving the banner has been shown once on this machine. */
-const SEEN_MARKER = join(homedir(), ".agentpool", "seen");
+const SEEN_MARKER = join(homedir(), ".agenticpool", "seen");
 
 /** Print the banner the very first time the CLI runs, then never again. */
 export function showBannerOnce(): void {
   if (existsSync(SEEN_MARKER)) return;
-  // stderr so piping `agentpool list | …` stays clean on the first run too.
+  // stderr so piping `agenticpool list | …` stays clean on the first run too.
   console.error(BANNER);
   try {
-    mkdirSync(join(homedir(), ".agentpool"), { recursive: true });
+    mkdirSync(join(homedir(), ".agenticpool"), { recursive: true });
     writeFileSync(SEEN_MARKER, new Date().toISOString(), "utf8");
   } catch {
     // non-fatal: if we can't write the marker, banner just shows again next run

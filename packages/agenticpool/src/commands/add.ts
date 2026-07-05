@@ -57,7 +57,7 @@ export async function addCommand(spec?: string): Promise<void> {
   }
 
   if (!entry) {
-    console.error(`✗ "${name}" not found. Try: agentpool search ${name}`);
+    console.error(`✗ "${name}" not found. Try: agenticpool search ${name}`);
     process.exitCode = 1;
     return;
   }

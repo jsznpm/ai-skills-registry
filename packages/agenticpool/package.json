@@ -1,16 +1,19 @@
 {
-  "name": "agentpool",
+  "name": "claude-agentpool",
   "version": "0.1.0",
   "description": "Package manager for the AI Skills Registry — Ink TUI edition (list, search, add, remove skills, commands, and agents for Claude Code)",
   "type": "module",
   "bin": {
-    "agentpool": "dist/index.js"
+    "agenticpool": "dist/index.js"
   },
   "files": [
     "dist"
   ],
   "engines": {
     "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "build": "tsup",

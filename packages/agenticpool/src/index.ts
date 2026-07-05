@@ -15,7 +15,7 @@ const program = new Command();
 program.addHelpText("beforeAll", BANNER);
 
 program
-  .name("agentpool")
+  .name("agenticpool")
   .description("Package manager for the AI Skills Registry (skills, commands, agents) — Ink TUI edition")
   .version("0.1.0")
   .option(
