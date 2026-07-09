@@ -1,0 +1,24 @@
+{
+  "installed": {
+    "skill:frontend-design": {
+      "type": "skill",
+      "version": "1.0.0",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "skill.json"
+      ],
+      "installedAt": "2026-07-09T10:35:48.257Z"
+    },
+    "skill:frontend-dev-guidelines": {
+      "type": "skill",
+      "version": "1.0.0",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "skill.json"
+      ],
+      "installedAt": "2026-07-09T10:35:49.096Z"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "workflow-automation",
+  "version": "1.0.0",
+  "description": "Workflow automation architect — durable execution and orchestration patterns across n8n, Temporal, and Inngest",
+  "author": "ai-skills-registry",
+  "tags": [
+    "workflow-automation",
+    "workflow-orchestration",
+    "durable-execution",
+    "event-driven-workflows",
+    "step-functions",
+    "job-queues",
+    "background-jobs",
+    "scheduled-tasks",
+    "n8n",
+    "temporal",
+    "inngest"
+  ]
+}

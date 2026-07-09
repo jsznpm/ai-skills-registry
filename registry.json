@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-05T15:07:19.451Z",
-  "count": 38,
+  "generatedAt": "2026-07-09T10:46:21.723Z",
+  "count": 40,
   "counts": {
-    "skills": 29,
+    "skills": 31,
     "commands": 6,
     "agents": 3
   },
@@ -443,6 +443,32 @@
     },
     {
       "type": "skill",
+      "name": "scikit-bio",
+      "version": "1.0.0",
+      "description": "Biological data toolkit — sequence analysis, alignments, phylogenetic trees, diversity metrics (alpha/beta, UniFrac), ordination (PCoA), PERMANOVA, FASTA/Newick I/O, for microbiome analysis",
+      "author": "ai-skills-registry",
+      "tags": [
+        "bioinformatics",
+        "scikit-bio",
+        "python",
+        "microbiome",
+        "phylogenetics",
+        "sequence-analysis",
+        "diversity-metrics",
+        "ordination",
+        "qiime2",
+        "fasta",
+        "newick"
+      ],
+      "path": "skills/scikit-bio",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "skill.json"
+      ]
+    },
+    {
+      "type": "skill",
       "name": "senior-architect",
       "version": "1.0.0",
       "description": "Software architecture skill for designing scalable, maintainable systems across React, Next.js, Node.js, Express, React Native, Swift, Kotlin, Flutter, Postgres, GraphQL, Go, and Python. Covers system design patterns, tech-stack decision frameworks, trade-off analysis, and integration design.",
@@ -625,6 +651,32 @@
         "frontend"
       ],
       "path": "skills/web-performance-optimization",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "skill.json"
+      ]
+    },
+    {
+      "type": "skill",
+      "name": "workflow-automation",
+      "version": "1.0.0",
+      "description": "Workflow automation architect — durable execution and orchestration patterns across n8n, Temporal, and Inngest",
+      "author": "ai-skills-registry",
+      "tags": [
+        "workflow-automation",
+        "workflow-orchestration",
+        "durable-execution",
+        "event-driven-workflows",
+        "step-functions",
+        "job-queues",
+        "background-jobs",
+        "scheduled-tasks",
+        "n8n",
+        "temporal",
+        "inngest"
+      ],
+      "path": "skills/workflow-automation",
       "files": [
         "README.md",
         "SKILL.md",

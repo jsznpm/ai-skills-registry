@@ -1,0 +1,19 @@
+{
+  "name": "scikit-bio",
+  "version": "1.0.0",
+  "description": "Biological data toolkit — sequence analysis, alignments, phylogenetic trees, diversity metrics (alpha/beta, UniFrac), ordination (PCoA), PERMANOVA, FASTA/Newick I/O, for microbiome analysis",
+  "author": "ai-skills-registry",
+  "tags": [
+    "bioinformatics",
+    "scikit-bio",
+    "python",
+    "microbiome",
+    "phylogenetics",
+    "sequence-analysis",
+    "diversity-metrics",
+    "ordination",
+    "qiime2",
+    "fasta",
+    "newick"
+  ]
+}
