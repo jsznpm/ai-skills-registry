@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-09T10:46:21.723Z",
-  "count": 40,
+  "generatedAt": "2026-07-12T18:07:18.298Z",
+  "count": 41,
   "counts": {
-    "skills": 31,
+    "skills": 32,
     "commands": 6,
     "agents": 3
   },
@@ -195,6 +195,29 @@
         "references/social_media_optimization.md",
         "scripts/brand_voice_analyzer.py",
         "scripts/seo_optimizer.py",
+        "skill.json"
+      ]
+    },
+    {
+      "type": "skill",
+      "name": "course-builder",
+      "version": "1.0.0",
+      "description": "Turns a source link into a complete, example-rich course written to the courses/ folder, asking the user which language to write it in and splitting large topics into a plan plus multiple parts.",
+      "author": "ai-skills-registry",
+      "tags": [
+        "course",
+        "education",
+        "learning",
+        "tutorial",
+        "markdown",
+        "content-generation",
+        "curriculum"
+      ],
+      "path": "skills/course-builder",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "examples.md",
         "skill.json"
       ]
     },

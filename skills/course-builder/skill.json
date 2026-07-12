@@ -1,0 +1,7 @@
+{
+  "name": "course-builder",
+  "version": "1.0.0",
+  "description": "Turns a source link into a complete, example-rich course written to the courses/ folder, asking the user which language to write it in and splitting large topics into a plan plus multiple parts.",
+  "author": "ai-skills-registry",
+  "tags": ["course", "education", "learning", "tutorial", "markdown", "content-generation", "curriculum"]
+}
