@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-12T18:07:18.298Z",
-  "count": 41,
+  "generatedAt": "2026-07-13T04:27:17.528Z",
+  "count": 42,
   "counts": {
     "skills": 32,
     "commands": 6,
-    "agents": 3
+    "agents": 4
   },
   "skills": [
     {
@@ -815,6 +815,23 @@
     }
   ],
   "agents": [
+    {
+      "type": "agent",
+      "name": "api-documenter",
+      "version": "1.0.0",
+      "description": "Use this agent when creating or improving API documentation, writing OpenAPI specifications, building interactive documentation portals, or generating code examples for APIs.",
+      "author": "ai-skills-registry",
+      "tags": [
+        "api",
+        "documentation",
+        "openapi",
+        "examples"
+      ],
+      "path": "agents",
+      "files": [
+        "api-documenter.md"
+      ]
+    },
     {
       "type": "agent",
       "name": "code-reviewer",
