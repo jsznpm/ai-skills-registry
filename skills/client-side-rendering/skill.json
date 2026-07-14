@@ -1,0 +1,7 @@
+{
+  "name": "client-side-rendering",
+  "version": "1.1.0",
+  "description": "Teaches client-side rendering (CSR) for React applications. Use when building highly interactive apps where SEO is not a priority and the UI is driven by user actions.",
+  "author": "patterns.dev",
+  "tags": ["react", "csr", "spa", "performance", "seo", "rendering"]
+}

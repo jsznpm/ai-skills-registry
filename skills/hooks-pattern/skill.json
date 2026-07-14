@@ -1,0 +1,7 @@
+{
+  "name": "hooks-pattern",
+  "version": "1.1.0",
+  "description": "Teaches React Hooks for reusing stateful logic across components. Use when extracting shared behavior like form handling, subscriptions, or side effects into reusable custom hooks.",
+  "author": "patterns.dev",
+  "tags": ["react", "hooks", "usestate", "useeffect", "custom-hooks", "state-management"]
+}

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-13T04:27:17.528Z",
-  "count": 42,
+  "generatedAt": "2026-07-14T06:19:00.897Z",
+  "count": 45,
   "counts": {
-    "skills": 32,
+    "skills": 35,
     "commands": 6,
     "agents": 4
   },
@@ -113,6 +113,27 @@
     },
     {
       "type": "skill",
+      "name": "client-side-rendering",
+      "version": "1.1.0",
+      "description": "Teaches client-side rendering (CSR) for React applications. Use when building highly interactive apps where SEO is not a priority and the UI is driven by user actions.",
+      "author": "patterns.dev",
+      "tags": [
+        "react",
+        "csr",
+        "spa",
+        "performance",
+        "seo",
+        "rendering"
+      ],
+      "path": "skills/client-side-rendering",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "skill.json"
+      ]
+    },
+    {
+      "type": "skill",
       "name": "code-documentation-generator",
       "version": "1.0.0",
       "description": "Generates professional Markdown documentation (README.md, API_DOCS.md, optional IMPLEMENTATION_NOTES.md) from source code in any language",
@@ -168,6 +189,26 @@
         "README.md",
         "SKILL.md",
         "examples.md",
+        "skill.json"
+      ]
+    },
+    {
+      "type": "skill",
+      "name": "compound-pattern",
+      "version": "1.1.0",
+      "description": "Teaches the compound component pattern for shared implicit state. Use when building related components like tabs, accordions, or dropdowns that need to coordinate without explicit prop passing.",
+      "author": "patterns.dev",
+      "tags": [
+        "react",
+        "compound-components",
+        "context-api",
+        "component-composition",
+        "design-patterns"
+      ],
+      "path": "skills/compound-pattern",
+      "files": [
+        "README.md",
+        "SKILL.md",
         "skill.json"
       ]
     },
@@ -296,6 +337,27 @@
         "suspense"
       ],
       "path": "skills/frontend-dev-guidelines",
+      "files": [
+        "README.md",
+        "SKILL.md",
+        "skill.json"
+      ]
+    },
+    {
+      "type": "skill",
+      "name": "hooks-pattern",
+      "version": "1.1.0",
+      "description": "Teaches React Hooks for reusing stateful logic across components. Use when extracting shared behavior like form handling, subscriptions, or side effects into reusable custom hooks.",
+      "author": "patterns.dev",
+      "tags": [
+        "react",
+        "hooks",
+        "usestate",
+        "useeffect",
+        "custom-hooks",
+        "state-management"
+      ],
+      "path": "skills/hooks-pattern",
       "files": [
         "README.md",
         "SKILL.md",
